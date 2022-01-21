@@ -82,6 +82,8 @@ function generateKeyPair (signingKey) {
   const key = new Uint8Array(64)
   const encodedKey = new Uint8Array(Buffer.from(signingKey, 'hex'))
   key.set(encodedKey)
+
+  // Generating nacl keyPair Object
   const keyPair = nacl.sign.keyPair.fromSeed(encodedKey)
 
   return keyPair
