@@ -6,7 +6,6 @@ async function fetchAccountBalance (PV_IP, accountNumber) {
     return response.data.balance
   } catch (error) {
     console.log(error)
-    return null
   }
 }
 
