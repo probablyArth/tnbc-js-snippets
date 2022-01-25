@@ -79,7 +79,6 @@ function generateSignature (message, keyPair) {
 
 function generateKeyPair (signingKey) {
   // Convert signingKey from string to Uint8Array
-  const key = new Uint8Array(64)
   const encodedKey = new Uint8Array(Buffer.from(signingKey, 'hex'))
   key.set(encodedKey)
 
