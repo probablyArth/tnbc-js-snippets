@@ -80,7 +80,6 @@ function generateSignature (message, keyPair) {
 function generateKeyPair (signingKey) {
   // Convert signingKey from string to Uint8Array
   const encodedKey = new Uint8Array(Buffer.from(signingKey, 'hex'))
-  key.set(encodedKey)
 
   // Generating nacl keyPair Object
   const keyPair = nacl.sign.keyPair.fromSeed(encodedKey)
